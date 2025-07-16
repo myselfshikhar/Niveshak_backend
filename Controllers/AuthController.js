@@ -14,7 +14,7 @@ module.exports.Signup = async (req, res, next) => {
     const token = createSecretToken(user._id);
     res.cookie("token", token, {
       httpOnly: true,
-       secure: process.env.NODE_ENV === "production",
+        secure: true,  
       sameSite: "None", // required for cross-origin
       maxAge: 24 * 60 * 60 * 1000 // optional: 1 day
     });
@@ -44,7 +44,7 @@ module.exports.Login = async (req, res, next) => {
      const token = createSecretToken(user._id);
      res.cookie("token", token, {
        httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
+         secure: true,  
       sameSite: "None",
       maxAge: 24 * 60 * 60 * 1000
      });
