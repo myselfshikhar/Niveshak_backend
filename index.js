@@ -20,7 +20,7 @@ const authRoute = require("./routes/AuthRoute");
 
 app.use(cors({
   origin: ["http://localhost:3000", "http://localhost:8000",  "https://niveshak-frontend.vercel.app",
-    "https://niveshak-dashboard.vercel.app"], // allow frontend and dashboard
+    "https://niveshak-dashboard.vercel.app/"], // allow frontend and dashboard
   credentials: true // this is required for cookies/session
 }));
 app.use(bodyParser.json());
