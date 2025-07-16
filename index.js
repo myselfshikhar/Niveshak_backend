@@ -289,7 +289,7 @@ app.post("/sellOrder", async (req, res) => {
   }
 });
 
-app.use("/", authRoute);
+app.use("/auth", authRoute);
 
 
 
